@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="parent">
+        <h1>My Calculator</h1>
+        <div class="screen">
+            <input type="text" placeholder="Enter text here" />
+        </div>
+        <div class="buttons">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript code can be added here if needed
+    const buttons = document.querySelectorAll('.buttons button');
+    const input = document.querySelector('.screen input');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            input.value += button.textContent;
+        });
+    });
+</script>
+</html>
